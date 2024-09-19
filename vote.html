@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="auth">
+        <h2>Authenticate to Vote</h2>
+        <input type="text" id="firstName" placeholder="Enter your first name" />
+        <input type="text" id="lastName" placeholder="Enter your last name" />
+        <select id="groupSelect">
+            <option value="" disabled selected>Select your group</option>
+            <option value="Group 1">Group 1</option>
+            <option value="Group 2">Group 2</option>
+            <option value="Group 3">Group 3</option>
+            <option value="Group 4">Group 4</option>
+        </select>
+        <button onclick="authenticate()">Authenticate</button>
+        <p id="authMessage"></p>
+    </div>
+
+    <div id="voteSection" style="display: none;">
+        <h2>Please choose a delegate:</h2>
+        <form id="voteForm">
+            <div id="candidates"></div>
+            <button type="submit">Vote</button>
+        </form>
+        <p id="voteMessage"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
